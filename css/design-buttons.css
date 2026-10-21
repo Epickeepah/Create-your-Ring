@@ -1,0 +1,46 @@
+.button-frame {
+  position: absolute;
+  width: 250px;
+  height: 400px;
+  background: white;
+  border: 3px solid white;
+  border-radius: 50px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  padding-inline: 0;
+  gap: 0;
+  box-sizing: border-box;
+  z-index: 100;
+}
+
+.images {
+  width: 100%;
+  flex: 3;
+  min-height: 0;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+  transform: scale(1.2);
+}
+
+.buttons {
+  position: static;
+  width: 100%;
+  flex: 1;
+  min-height: 0;
+  padding: 0;
+  background: white;
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
+  z-index: 20;
+  color: #fea2a2;
+  font-size: 25px;
+}
+
+.buttons:hover {
+  background: #fea2a2;
+  color: red;
+  transform: scale(1.03);
+}

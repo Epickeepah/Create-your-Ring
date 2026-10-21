@@ -1,0 +1,100 @@
+.flower-corner-right {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 650px;
+  height: 650px;
+  transform: translate(20px, -20px);
+  z-index: 100;
+}
+
+.flower-corner-left {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 650px;
+  height: 650px;
+  transform: translate(-20px, -20px) scaleX(-1);
+  z-index: 100;
+}
+
+.flower-top {
+  position: absolute;
+  top: 0;
+  left: 15%;
+  width: 1500px;
+  height: 700px;
+  transform: translateY(-450px) scaleY(-1);
+  z-index: 50;
+}
+
+.flower {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+}
+
+.small-flower {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+}
+
+body {
+  background-color: #fda8a8;
+  border: 10px solid #fea2a2;
+  box-sizing: border-box;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.start-button {
+  position: absolute;
+  width: 700px;
+  height: 150px;
+  display: flex;
+  padding: 1.2em 1rem;
+  cursor: pointer;
+  gap: 0.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 50px;
+  font-weight: bold;
+  border-radius: 30px;
+  text-shadow: 2px 2px 3px rgb(136 0 136 / 50%);
+  background: linear-gradient(
+      15deg,
+      #880088,
+      #aa2068,
+      #cc3f47,
+      #de6f3d,
+      #f09f33,
+      #de6f3d,
+      #cc3f47,
+      #aa2068,
+      #880088
+    )
+    no-repeat;
+  background-size: 300%;
+  color: #fff;
+  border: none;
+  background-position: left center;
+  box-shadow: 0 30px 10px -20px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s ease;
+}
+
+.start-button:hover {
+  background-size: 320%;
+  background-position: right center;
+}
+
+.start-button:hover svg {
+  fill: #fff;
+}
+
+.start-button svg {
+  width: 23px;
+  fill: #f09f33;
+  transition: 0.3s ease;
+}
