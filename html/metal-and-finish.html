@@ -1,0 +1,102 @@
+```html
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Metal Style</title>
+    <link rel="stylesheet" href="../css/design.css" />
+    <link rel="stylesheet" href="../css/design-buttons.css" />
+  </head>
+
+  <body>
+    <main>
+      <div class="main-frame">
+        <button
+          class="start-button"
+          id="start-button"
+          style="
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            width: 200px;
+            height: 60px;
+            font-size: 30px;
+            padding: 0;
+            box-sizing: border-box;
+            z-index: 100;
+          "
+          onclick="window.location.href = './ring-style.html'"
+        >
+          Back
+        </button>
+
+        <!-- Style buttons -->
+        <div class="main-button-framing">
+          <h1 class="ring-context">
+            Metal Type <span style="font-size: 40px">2/10</span>
+          </h1>
+          <div class="button-row">
+            <div class="button-frame">
+              <img
+                src="../images/yellow-gold-ring.png"
+                alt="Engagement ring"
+                class="images"
+              />
+
+              <button
+                class="buttons"
+                onclick="window.location.href = './main-gemstone.html'"
+              >
+                Select<br />
+                Yellow Gold
+              </button>
+            </div>
+
+            <div class="button-frame">
+              <img
+                src="../images/white-gold-ring.png"
+                alt="ring"
+                class="images"
+                style="transform: scale(1.9)"
+              />
+              <button
+                class="buttons"
+                onclick="window.location.href = './main-gemstone.html'"
+              >
+                Select <br />
+                White Gold
+              </button>
+            </div>
+
+            <div class="button-frame">
+              <img
+                src="../images/rose-gold-ring.png"
+                alt="ring"
+                class="images"
+              />
+              <button
+                class="buttons"
+                onclick="window.location.href = './main-gemstone.html'"
+              >
+                Select <br />
+                Rose Gold
+              </button>
+            </div>
+
+            <div class="button-frame">
+              <img src="../images/plat-ring.png" alt="ring" class="images" />
+              <button
+                class="buttons"
+                onclick="window.location.href = './main-gemstone.html'"
+              >
+                Select <br />
+                Platinume
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

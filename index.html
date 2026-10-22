@@ -3,36 +3,33 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Main Menu</title>
+    <title>Start Design</title>
     <link rel="stylesheet" href="./css/design.css" />
   </head>
+  <style>
+    .main-button-framing {
+      display: flex;
+      flex-direction: column; /* Heading above the buttons */
+      align-items: center;
+      gap: 30px;
+      width: 100%;
+      margin-top: 130px;
+    }
+  </style>
   <body>
     <script type="module" src="./scripts/"></script>
     <main>
       <div class="main-frame">
-        <img
-          src="./images/flower-corner.png"
-          alt="flower-corner-right"
-          class="flower-corner-right"
-        />
-        <img
-          src="./images/flower-corner.png"
-          alt="flower-corner-right"
-          class="flower-corner-left"
-        />
-        <img
-          src="./images/flower-top.png"
-          alt="flower-top"
-          class="flower-top"
-        />
-        <button
-          class="start-button"
-          id="start-button"
-          style="position: absolute; top: 50%; left: 35%"
-          onclick="window.location.href = './html/ring-style.html'"
-        >
-          Start Your Design
-        </button>
+        <div class="main-button-framing">
+          <button
+            class="start-button"
+            id="start-button"
+            style="position: absolute; top: 50%; left: 35%"
+            onclick="window.location.href = './html/ring-style.html'"
+          >
+            Start Your Design
+          </button>
+        </div>
       </div>
     </main>
   </body>

@@ -4,7 +4,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Menu1</title>
+    <title>Ring Style</title>
     <link rel="stylesheet" href="../css/design.css" />
     <link rel="stylesheet" href="../css/design-buttons.css" />
   </head>
@@ -12,24 +12,6 @@
   <body>
     <main>
       <div class="main-frame">
-        <img
-          src="../images/flower-corner.png"
-          alt="flower-corner-right"
-          class="flower-corner-right"
-        />
-
-        <img
-          src="../images/flower-corner.png"
-          alt="flower-corner-left"
-          class="flower-corner-left"
-        />
-
-        <img
-          src="../images/flower-top.png"
-          alt="flower-top"
-          class="flower-top"
-        />
-
         <button
           class="start-button"
           id="start-button"
@@ -50,33 +32,50 @@
         </button>
 
         <!-- Style buttons -->
-        <div class="button-frame" style="left: 30%; top: 30%">
-          <img
-            src="../images/engagement-ring.png"
-            alt="Engagement ring"
-            class="images"
-          />
 
-          <button class="buttons">
-            Select<br />
-            Engagement Ring
-          </button>
-        </div>
+        <div class="main-button-framing">
+          <h1 class="ring-context">
+            Ring Type <span style="font-size: 40px">1/10</span>
+          </h1>
+          <div class="button-row">
+            <div class="button-frame">
+              <img
+                src="../images/engagement-ring.png"
+                alt="Engagement ring"
+                class="images"
+              />
 
-        <div class="button-frame" style="left: 45%; top: 30%">
-          <img src="../images/wedding-band.png" alt="ring" class="images" />
-          <button class="buttons">
-            Select <br />
-            Wedding Band
-          </button>
-        </div>
+              <button
+                class="buttons"
+                onclick="window.location.href = './metal-and-finish.html'"
+              >
+                Select<br />
+                Engagement Ring
+              </button>
+            </div>
 
-        <div class="button-frame" style="left: 60%; top: 30%">
-          <img src="../images/promis-ring.png" alt="ring" class="images" />
-          <button class="buttons">
-            Select <br />
-            Wedding Band
-          </button>
+            <div class="button-frame">
+              <img src="../images/wedding-band.png" alt="ring" class="images" />
+              <button
+                class="buttons"
+                onclick="window.location.href = './metal-and-finish.html'"
+              >
+                Select <br />
+                Wedding Band
+              </button>
+            </div>
+
+            <div class="button-frame">
+              <img src="../images/promis-ring.png" alt="ring" class="images" />
+              <button
+                class="buttons"
+                onclick="window.location.href = './metal-and-finish.html'"
+              >
+                Select <br />
+                Promise Ring
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </main>

@@ -1,9 +1,52 @@
+.main-button-framing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  width: 100%;
+  margin-top: 130px;
+}
+
+.level-two-button-framing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  width: 100%;
+  margin-top: 30px;
+}
+
+.ring-context {
+  text-align: center;
+  margin: 0;
+  z-index: 120;
+  color: white;
+  font-size: 80px;
+}
+
+.button-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  width: 100%;
+}
+
+.button-two-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 50px;
+  gap: 40px;
+  width: 100%;
+}
+
 .button-frame {
-  position: absolute;
+  position: relative;
   width: 250px;
   height: 400px;
-  background: white;
-  border: 3px solid white;
+  background: #fda8a8;
+  border: 3px solid #fda8a8;
   border-radius: 50px;
   overflow: hidden;
   display: flex;
