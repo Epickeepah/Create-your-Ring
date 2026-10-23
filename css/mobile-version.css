@@ -5,7 +5,7 @@
 
   body {
     background-image: url("../images/main-screen-image.png");
-    background-size: 120%;
+    background-size: 140%;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -42,11 +42,12 @@
   .start-button {
     position: absolute;
     left: 50%;
-    transform: translateX(-30%);
+    transform: translateX(-33%);
 
     width: calc(100% - 32px);
     max-width: 400px;
     box-sizing: border-box;
+    font-size: 30px;
   }
 
   /* =========================
@@ -57,7 +58,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 8px;
+    gap: 2px;
     width: 100%;
     box-sizing: border-box;
     padding: 0 4px;
@@ -164,11 +165,42 @@
     position: absolute;
     top: 0;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-35%);
 
     width: calc(100% - 32px);
     max-width: 400px;
     box-sizing: border-box;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  html,
+  body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  .main-frame,
+  .main-button-framing,
+  .level-two-button-framing,
+  .mobile-rings,
+  .mobile-carousel {
+    max-width: 99%;
+  }
+
+  .mobile-carousel .button-row {
+    min-width: 0;
+  }
+
+  .mobile-carousel .button-frame {
+    min-width: 0;
   }
 }
 
