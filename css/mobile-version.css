@@ -1,12 +1,19 @@
 @media (max-width: 650px) {
+  /* =========================
+     BACKGROUND
+  ========================= */
+
   body {
     background-image: url("../images/main-screen-image.png");
-    background-size: 100%;
+    background-size: 120%;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    transform: scale(2.7);
   }
+
+  /* =========================
+     BUTTON CONTAINERS
+  ========================= */
 
   .main-button-framing {
     margin-top: 90px;
@@ -20,19 +27,125 @@
     padding-inline: 12px;
   }
 
+  /* =========================
+     HEADING
+  ========================= */
+
   .ring-context {
     font-size: clamp(26px, 8vw, 42px);
   }
 
+  /* =========================
+     BACK BUTTON
+  ========================= */
+
   .start-button {
-    width: 100%;
-    min-height: 70px;
-    padding: 0.8rem;
-    border-radius: 20px;
-    font-size: clamp(18px, 5vw, 28px);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-30%);
+
+    width: calc(100% - 32px);
+    max-width: 400px;
+    box-sizing: border-box;
   }
 
-  .button-row,
+  /* =========================
+     MOBILE CAROUSEL
+  ========================= */
+
+  .mobile-carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 4px;
+  }
+
+  .mobile-carousel .button-row {
+    display: block;
+    flex: 1;
+    min-width: 0;
+    width: auto;
+    padding-top: 12px;
+  }
+
+  /* Hide every ring card by default */
+
+  .mobile-carousel .button-frame {
+    display: none;
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    aspect-ratio: 5 / 7;
+    margin: 0 auto;
+    border-radius: 24px;
+  }
+
+  /* Show only the selected ring */
+
+  .mobile-carousel .button-frame.active {
+    display: flex;
+  }
+
+  /* =========================
+     CAROUSEL ARROWS
+  ========================= */
+
+  .carousel-arrow {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+
+    width: 40px;
+    height: 40px;
+    padding: 0;
+
+    border: none;
+    border-radius: 50%;
+    background: #fda8a8;
+    color: white;
+
+    font-size: 22px;
+    cursor: pointer;
+  }
+
+  .carousel-arrow:active {
+    background: #fea2a2;
+    transform: scale(0.95);
+  }
+
+  /* =========================
+     RING IMAGES
+  ========================= */
+
+  .images {
+    width: 100%;
+    flex: 3;
+    min-height: 0;
+    object-fit: contain;
+    object-position: center;
+    transform: scale(1.08);
+  }
+
+  /* =========================
+     RING SELECTION BUTTONS
+  ========================= */
+
+  .buttons {
+    flex: 1;
+    min-height: 48px;
+    padding: 6px 4px;
+    font-size: clamp(13px, 3.5vw, 18px);
+  }
+
+  /* =========================
+     SECONDARY BUTTON ROWS
+     For rows that aren't carousels
+  ========================= */
+
   .button-two-row {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -41,24 +154,20 @@
     padding-top: 12px;
   }
 
-  .button-frame {
+  .button-two-row .button-frame {
+    display: flex;
     width: 100%;
     max-width: 220px;
-    height: auto;
-    aspect-ratio: 5 / 7;
-    border-radius: 24px;
   }
 
-  .images {
-    flex: 3;
-    min-height: 0;
-    transform: scale(1.08);
-  }
+  .back-button-frame {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
 
-  .buttons {
-    flex: 1;
-    min-height: 48px;
-    padding: 6px 4px;
-    font-size: clamp(13px, 3.5vw, 18px);
+    width: calc(100% - 32px);
+    max-width: 400px;
+    box-sizing: border-box;
   }
 }

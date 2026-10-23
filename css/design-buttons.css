@@ -1,3 +1,23 @@
+/* Default: desktop layout */
+.desktop-rings {
+  display: block !important;
+}
+
+.mobile-rings {
+  display: none !important;
+}
+
+/* Mobile layout */
+@media screen and (max-width: 650px) {
+  .desktop-rings {
+    display: none !important;
+  }
+
+  .mobile-rings {
+    display: block !important;
+  }
+}
+
 .main-button-framing {
   display: flex;
   flex-direction: column;
