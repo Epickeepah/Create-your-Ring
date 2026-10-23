@@ -5,6 +5,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    transform: scale(2.7);
   }
 
   .main-button-framing {
