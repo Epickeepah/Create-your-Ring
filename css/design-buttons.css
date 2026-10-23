@@ -1,10 +1,10 @@
 /* Default: desktop layout */
 .desktop-rings {
-  display: block !important;
+  display: block;
 }
 
 .mobile-rings {
-  display: none !important;
+  display: none;
 }
 
 /* Mobile layout */
