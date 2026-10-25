@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Metal Style</title>
     <link rel="stylesheet" href="../css/design.css" />
+    <link rel="stylesheet" href="../css/mobile-version.css" />
     <link rel="stylesheet" href="../css/design-buttons.css" />
   </head>
-
   <body>
     <main>
       <div class="main-frame">
@@ -32,10 +32,132 @@
 
         <!-- Style buttons -->
         <div class="main-button-framing">
-          <h1 class="ring-context">
-            Stone Setting/Arrangement <span style="font-size: 40px">4/10</span>
-          </h1>
-          <div class="button-row">
+          <div class="desktop-rings">
+            <h1 class="ring-context">
+              Stone Setting/Arrangement
+              <span style="font-size: 40px">4/10</span>
+            </h1>
+            <div class="button-row">
+              <div class="button-frame">
+                <img
+                  src="../images/solitaire-ring.png"
+                  alt="Engagement ring"
+                  class="images"
+                />
+
+                <button
+                  class="buttons"
+                  onclick="window.location.href = './main-gemstone.html'"
+                >
+                  Select<br />
+                  Solitaire Design
+                </button>
+              </div>
+
+              <div class="button-frame">
+                <img src="../images/halo-ring.png" alt="ring" class="images" />
+                <button
+                  class="buttons"
+                  onclick="window.location.href = './main-gemstone.html'"
+                >
+                  Select <br />
+                  Halo Design
+                </button>
+              </div>
+
+              <div class="button-frame">
+                <img
+                  src="../images/three-stone-ring.png"
+                  alt="ring"
+                  class="images"
+                />
+                <button
+                  class="buttons"
+                  onclick="window.location.href = './main-gemstone.html'"
+                >
+                  Select <br />
+                  Three Stone Design
+                </button>
+              </div>
+
+              <div class="button-frame">
+                <img
+                  src="../images/pave-ring.png"
+                  alt="ring"
+                  class="images"
+                  style="transform: scale(2)"
+                />
+                <button
+                  class="buttons"
+                  onclick="window.location.href = './main-gemstone.html'"
+                >
+                  Select <br />
+                  Peve Design
+                </button>
+              </div>
+
+              <div class="button-frame">
+                <img src="../images/bezel-ring.png" alt="ring" class="images" />
+                <button
+                  class="buttons"
+                  onclick="window.location.href = './main-gemstone.html'"
+                >
+                  Select <br />
+                  Bezel Design
+                </button>
+              </div>
+            </div>
+            <div class="level-two-button-framing">
+              <div class="button-row">
+                <div class="button-frame">
+                  <img
+                    src="../images/cluster-ring.png"
+                    alt="ring"
+                    class="images"
+                  />
+                  <button
+                    class="buttons"
+                    onclick="window.location.href = './main-gemstone.html'"
+                  >
+                    Select <br />
+                    Cluster Design
+                  </button>
+                </div>
+
+                <div class="button-frame">
+                  <img
+                    src="../images/tension-ring.png"
+                    alt="ring"
+                    class="images"
+                  />
+                  <button
+                    class="buttons"
+                    onclick="window.location.href = './main-gemstone.html'"
+                  >
+                    Select <br />
+                    Tension Design
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mobile-rings">
+        <h1 class="ring-context" style="font-size: 30px !important">
+          Stone Setting/Arrangement <span style="font-size: 40px">4/10</span>
+        </h1>
+        <div class="mobile-carousel">
+          <!-- Previous arrow -->
+          <button
+            class="carousel-arrow"
+            id="previous-ring"
+            aria-label="Previous ring"
+          >
+            &#10094;
+          </button>
+          <div class="button-row" id="ring-options">
             <div class="button-frame">
               <img
                 src="../images/solitaire-ring.png"
@@ -104,10 +226,6 @@
                 Bezel Design
               </button>
             </div>
-          </div>
-        </div>
-        <div class="level-two-button-framing">
-          <div class="button-row">
             <div class="button-frame">
               <img src="../images/cluster-ring.png" alt="ring" class="images" />
               <button
@@ -130,8 +248,44 @@
               </button>
             </div>
           </div>
+
+          <button class="carousel-arrow" id="next-ring" aria-label="Next ring">
+            &#10095;
+          </button>
         </div>
       </div>
+
+      <script>
+        const ringOptions = document.querySelectorAll(
+          "#ring-options .button-frame",
+        );
+
+        const previousButton = document.getElementById("previous-ring");
+        const nextButton = document.getElementById("next-ring");
+
+        let currentRing = 0;
+
+        function showRing(index) {
+          ringOptions.forEach((ring, i) => {
+            ring.classList.toggle("active", i === index);
+          });
+        }
+
+        previousButton.addEventListener("click", () => {
+          currentRing =
+            (currentRing - 1 + ringOptions.length) % ringOptions.length;
+
+          showRing(currentRing);
+        });
+
+        nextButton.addEventListener("click", () => {
+          currentRing = (currentRing + 1) % ringOptions.length;
+
+          showRing(currentRing);
+        });
+
+        showRing(currentRing);
+      </script>
     </main>
   </body>
 </html>

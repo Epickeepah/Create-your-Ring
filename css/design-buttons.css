@@ -8,7 +8,7 @@
 }
 
 /* Mobile layout */
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 750px) {
   .desktop-rings {
     display: none !important;
   }
@@ -16,6 +16,11 @@
   .mobile-rings {
     display: block !important;
   }
+}
+
+.dmdp {
+  height: 700px;
+  width: 700px;
 }
 
 .main-button-framing {
