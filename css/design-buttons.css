@@ -40,8 +40,10 @@
   text-align: center;
   margin: 0;
   z-index: 120;
-  color: red;
+  color: rgb(245, 73, 102);
   font-size: 80px;
+  -webkit-text-stroke: 3.5px white;
+  paint-order: stroke fill;
 }
 
 .button-row {

@@ -1,13 +1,14 @@
 html {
   min-height: 100%;
+  overflow-x: hidden;
   overflow-y: auto;
 }
 
 body {
-  min-height: 100vh;
+  min-height: 200vh;
   height: auto;
-  overflow-x: hidden;
-  overflow-y: auto;
+  margin: 0;
+  overflow: visible;
 }
 .flower-corner-right {
   position: absolute;
