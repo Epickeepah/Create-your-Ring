@@ -20,7 +20,7 @@
 @media (max-width: 750px) {
   body {
     background-image: url("../images/main-screen-image.png");
-    background-size: 140%;
+    background-size: 140% auto;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
