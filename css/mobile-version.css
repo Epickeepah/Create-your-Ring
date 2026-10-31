@@ -18,6 +18,11 @@
 }
 
 @media (max-width: 750px) {
+  html {
+    min-height: 100%;
+    overflow-y: auto;
+  }
+
   body {
     background-image: url("../images/main-screen-image.png");
     background-size: 130% auto;
@@ -30,8 +35,12 @@
     justify-content: flex-start;
     align-items: center;
 
-    min-height: 130vh;
-    padding-bottom: 100px;
+    min-height: 120vh;
+    height: auto;
+    padding-bottom: 150px;
+
+    overflow-x: hidden;
+    overflow-y: visible;
     box-sizing: border-box;
   }
 
