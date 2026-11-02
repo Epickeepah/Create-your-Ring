@@ -170,7 +170,7 @@
 
       <div class="mobile-rings">
         <h1 class="ring-context">
-          Gem Type <span style="font-size: 40px">3/10</span>
+          Gem Type <span style="font-size: 30px">3/10</span>
         </h1>
         <div class="mobile-carousel">
           <!-- Previous arrow -->
@@ -279,6 +279,7 @@
                 No Gem
               </button>
             </div>
+            <h1 class="counter-details" id="ring-counter">1/0</h1>
           </div>
 
           <!-- Next arrow -->
@@ -303,6 +304,7 @@
 
         const previousButton = document.getElementById("previous-ring");
         const nextButton = document.getElementById("next-ring");
+        const ringCounter = document.getElementById("ring-counter");
 
         let currentRing = 0;
 
@@ -310,6 +312,8 @@
           ringOptions.forEach((ring, i) => {
             ring.classList.toggle("active", i === index);
           });
+
+          ringCounter.textContent = `${currentRing + 1} / ${ringOptions.length}`;
         }
 
         previousButton.addEventListener("click", () => {

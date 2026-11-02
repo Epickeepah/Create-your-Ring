@@ -161,6 +161,7 @@
             &#10095;
           </button>
         </div>
+        <h1 class="counter-details" id="ring-counter">1/0</h1>
       </div>
       <script>
         const ringOptions = document.querySelectorAll(
@@ -169,6 +170,7 @@
 
         const previousButton = document.getElementById("previous-ring");
         const nextButton = document.getElementById("next-ring");
+        const ringCounter = document.getElementById("ring-counter");
 
         let currentRing = 0;
 
@@ -176,6 +178,8 @@
           ringOptions.forEach((ring, i) => {
             ring.classList.toggle("active", i === index);
           });
+
+          ringCounter.textContent = `${currentRing + 1} / ${ringOptions.length}`;
         }
 
         previousButton.addEventListener("click", () => {

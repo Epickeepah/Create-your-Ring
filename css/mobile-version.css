@@ -45,18 +45,37 @@
   }
 
   .ring-context {
-    font-size: 50px !important;
-    transform: translateY(-100px);
+    font-size: clamp(24px, 7vw, 50px) !important;
+    white-space: nowrap;
+    transform: translateY(-30px);
+  }
+
+  .small-ring-context {
+    font-size: clamp(16px, 4.5vw, 30px) !important;
+    white-space: nowrap;
+    transform: translateY(-30px);
   }
 
   .dmdp {
     transform: scale(0.5);
   }
 
+  .counter-details {
+    text-align: center;
+    margin: 0;
+    font-size: clamp(24px, 7vw, 50px) !important;
+    white-space: nowrap;
+    transform: translateY(20px);
+    z-index: 1000;
+    color: rgb(245, 73, 102);
+    -webkit-text-stroke: 3.5px white;
+    paint-order: stroke fill;
+  }
+
   .main-frame {
     max-width: 90%;
     width: 100%;
-    padding: 30px;
+    padding: 10px;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -117,12 +136,12 @@
     position: absolute;
     width: 90%;
     height: 100px;
-    margin-top: 30px;
+    margin-top: 50px;
     margin-left: 10%;
     left: 1px;
     padding: 1.2em 1rem;
     cursor: pointer;
-    gap: 0.4rem;
+    gap: 1rem;
     display: flex;
     align-items: center;
     justify-content: center;

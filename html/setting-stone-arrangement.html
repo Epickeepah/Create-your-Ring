@@ -146,7 +146,7 @@
 
       <div class="mobile-rings">
         <h1 class="ring-context">
-          Stone Setting <span style="font-size: 40px">4/10</span>
+          Stone Setting <span style="font-size: 30px">4/10</span>
         </h1>
         <div class="mobile-carousel">
           <!-- Previous arrow -->
@@ -253,8 +253,8 @@
             &#10095;
           </button>
         </div>
+        <h1 class="counter-details" id="ring-counter">1/0</h1>
       </div>
-
       <script>
         const ringOptions = document.querySelectorAll(
           "#ring-options .button-frame",
@@ -262,6 +262,7 @@
 
         const previousButton = document.getElementById("previous-ring");
         const nextButton = document.getElementById("next-ring");
+        const ringCounter = document.getElementById("ring-counter");
 
         let currentRing = 0;
 
@@ -269,6 +270,8 @@
           ringOptions.forEach((ring, i) => {
             ring.classList.toggle("active", i === index);
           });
+
+          ringCounter.textContent = `${currentRing + 1} / ${ringOptions.length}`;
         }
 
         previousButton.addEventListener("click", () => {
