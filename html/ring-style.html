@@ -192,6 +192,34 @@
           showRing(currentRing);
         });
 
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        ringContainer.addEventListener("touchstart", (event) => {
+          touchStartX = event.changedTouches[0].screenX;
+        });
+
+        ringContainer.addEventListener("touchend", (event) => {
+          touchEndX = event.changedTouches[0].screenX;
+
+          handleSwipe();
+        });
+
+        function handleSwipe() {
+          const swipeDistance = touchEndX - touchStartX;
+
+          // Minimum distance required to count as a swipe
+          const minimumSwipe = 50;
+
+          if (swipeDistance < -minimumSwipe) {
+            // Swipe LEFT - Next ring
+            nextButton.click();
+          } else if (swipeDistance > minimumSwipe) {
+            // Swipe RIGHT - Previous ring
+            previousButton.click();
+          }
+        }
+
         showRing(currentRing);
       </script>
     </main>
