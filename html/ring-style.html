@@ -160,7 +160,10 @@
         </div>
         <h1 class="counter-details" id="ring-counter">1/0</h1>
       </div>
+
       <script>
+        const ringContainer = document.getElementById("ring-options");
+
         const ringOptions = document.querySelectorAll(
           "#ring-options .button-frame",
         );
@@ -179,6 +182,7 @@
           ringCounter.textContent = `${currentRing + 1} / ${ringOptions.length}`;
         }
 
+        // Previous button
         previousButton.addEventListener("click", () => {
           currentRing =
             (currentRing - 1 + ringOptions.length) % ringOptions.length;
@@ -186,40 +190,53 @@
           showRing(currentRing);
         });
 
+        // Next button
         nextButton.addEventListener("click", () => {
           currentRing = (currentRing + 1) % ringOptions.length;
 
           showRing(currentRing);
         });
 
+        // Swipe functionality
         let touchStartX = 0;
-        let touchEndX = 0;
+        let touchStartY = 0;
 
-        ringContainer.addEventListener("touchstart", (event) => {
-          touchStartX = event.changedTouches[0].screenX;
-        });
+        ringContainer.addEventListener(
+          "touchstart",
+          (event) => {
+            touchStartX = event.changedTouches[0].screenX;
+            touchStartY = event.changedTouches[0].screenY;
+          },
+          { passive: true },
+        );
 
-        ringContainer.addEventListener("touchend", (event) => {
-          touchEndX = event.changedTouches[0].screenX;
+        ringContainer.addEventListener(
+          "touchend",
+          (event) => {
+            const touchEndX = event.changedTouches[0].screenX;
+            const touchEndY = event.changedTouches[0].screenY;
 
-          handleSwipe();
-        });
+            const swipeDistanceX = touchEndX - touchStartX;
+            const swipeDistanceY = touchEndY - touchStartY;
 
-        function handleSwipe() {
-          const swipeDistance = touchEndX - touchStartX;
+            const minimumSwipe = 50;
 
-          // Minimum distance required to count as a swipe
-          const minimumSwipe = 50;
+            // Only register horizontal swipes
+            if (
+              Math.abs(swipeDistanceX) > minimumSwipe &&
+              Math.abs(swipeDistanceX) > Math.abs(swipeDistanceY)
+            ) {
+              if (swipeDistanceX < 0) {
+                nextButton.click();
+              } else {
+                previousButton.click();
+              }
+            }
+          },
+          { passive: true },
+        );
 
-          if (swipeDistance < -minimumSwipe) {
-            // Swipe LEFT - Next ring
-            nextButton.click();
-          } else if (swipeDistance > minimumSwipe) {
-            // Swipe RIGHT - Previous ring
-            previousButton.click();
-          }
-        }
-
+        // Display first ring
         showRing(currentRing);
       </script>
     </main>
